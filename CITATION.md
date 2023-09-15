@@ -1,7 +1,7 @@
-If you make use of the Semantic Drone data, please cite the following reference:
+If you use this dataset in your research, please cite the following URL:
 
-``` bibtex
-PASTE HERE CUSTOM CITATION FROM THE SOURCE URL
+``` apa
+http://dronedataset.icg.tugraz.at
 ```
 
 [Source](http://dronedataset.icg.tugraz.at/)
