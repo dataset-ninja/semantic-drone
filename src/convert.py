@@ -8,7 +8,6 @@ from urllib.parse import unquote, urlparse
 import numpy as np
 import supervisely as sly
 from cv2 import connectedComponents
-from dataset_tools.convert import unpack_if_archive
 from dotenv import load_dotenv
 from PIL import Image
 from supervisely.io.fs import (
@@ -22,6 +21,7 @@ from supervisely.io.fs import (
 from tqdm import tqdm
 
 import src.settings as s
+from dataset_tools.convert import unpack_if_archive
 
 
 def convert_and_upload_supervisely_project(
@@ -29,14 +29,14 @@ def convert_and_upload_supervisely_project(
 ) -> sly.ProjectInfo:
     # project_name = "semantic_drone_dataset"
     dataset_path = (
-        "/mnt/d/datasetninja-raw/semantic drone dataset/semantic_drone_dataset/training_set"
+        "/mnt/d/datasetninja-raw/semantic-drone-dataset/semantic_drone_dataset/training_set"
     )
     images_folder = "images"
     masks_folder = "gt/semantic/label_images"
     masks_values_data_file = "gt/semantic/class_dict.csv"
     images_ext = ".jpg"
     masks_ext = ".png"
-    ds_name = "ds"
+    ds_name = "train"
     batch_size = 1
 
     def get_unique_colors(img):
